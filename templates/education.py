@@ -1,6 +1,15 @@
 from string import Template
 
 LISTING = Template(r"""
-{\bf $school, $location} \hfill $duration \\
-$description
+\item {\bf $school, $location} \hfill $duration\\ $description
+""")
+
+LAYOUT = Template(r"""
+$heading
+\begin{itemize}
+\itemsep0em
+
+$listing
+
+\end{itemize}
 """)

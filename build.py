@@ -2,11 +2,13 @@
 
 import os
 from yaml import load, Loader
-from templates import heading, education
+from templates import heading, education, publications
 
 
 DATA_DIR = "data"
 LAYOUR_DIR = "layouts"
+DEBUG = True
+
 
 with open(os.path.join(DATA_DIR, "achievements.yml"), "rt") as f:
     achievements_data = load(f, Loader=Loader)
@@ -19,13 +21,19 @@ with open(os.path.join(DATA_DIR, "courses.yml"), "rt") as f:
 
 with open(os.path.join(DATA_DIR, "education.yml"), "rt") as f:
     education_data = load(f, Loader=Loader)
-    education_string = heading.HEADING.substitute(heading="Education") + "\n"
+    section = heading.HEADING.substitute(heading="Education")
+    listing = ""
 
     for e in education_data:
-        education_string += education.LISTING.substitute(school=e["name"],
+        listing += education.LISTING.substitute(school=e["name"],
                                                         location=e["location"],
                                                         duration=e["duration"],
                                                         description=r"\\ ".join(e["description"]))
+
+    education_string = education.LAYOUT.substitute(heading=section,
+                                                    listing=listing)
+
+    if DEBUG: print(education_string)
 
 with open(os.path.join(DATA_DIR, "experience.yml"), "rt") as f:
     experience_data = load(f, Loader=Loader)
@@ -38,6 +46,21 @@ with open(os.path.join(DATA_DIR, "projects.yml"), "rt") as f:
 
 with open(os.path.join(DATA_DIR, "publications.yml"), "rt") as f:
     publications_data = load(f, Loader=Loader)
+    section = heading.HEADING.substitute(heading="Publications")
+    listing = ""
+
+    for p in publications_data:
+        if p["published"] == True:
+            listing += publications.LISTING.substitute(where=p["where"],
+                                                                when=p["when"],
+                                                                url=p["url"],
+                                                                title=p["title"],
+                                                                authors=p["authors"])
+
+    publications_string = publications.LAYOUT.substitute(heading=section,
+                                                            listing=listing)
+
+    if DEBUG: print(publications_string)
 
 with open(os.path.join(DATA_DIR, "references.yml"), "rt") as f:
     references_data = load(f, Loader=Loader)
