@@ -1,0 +1,31 @@
+- title: "A Heuristic Approach to Autonomously Construct Problem Sets of Trigonometric Identities: The First Step Towards Algorithmic Creativity"
+  authors: "Sayan Goswami, Rohini Das, Sayantani Ghosh and Amit Konar"
+  when: 2020
+  where: "CogSci"
+  published: no
+  code: ""
+  url: ""
+
+- title: "Brain Signal Analysis for Mind Controlled Type-Writer Using a Deep Neural Network"
+  authors: "Rohini Das, Sayan Goswami, Sayantani Ghosh, Mousumi Laha, Chandrima Debnath and Amit Konar"
+  when: 2020
+  where: "5th WiSPNET"
+  published: yes
+  code: https://github.com/say4n/classify.nn/
+  url: https://github.com/say4n/classify.nn/blob/master/paper/paper.pdf
+
+- title: "Relationship between Nash Equilibria and Pareto Optimal Solutions for Games of Pure Coordination"
+  authors: "Rohini Das, Sayan Goswami and Amit Konar"
+  when: 2019
+  where: "10th ICCCNT"
+  published: yes
+  code: https://github.com/say4n/maql
+  url: https://ieeexplore.ieee.org/abstract/document/8944817/
+
+- title: "Application of Deep Neural Network on Image Co-segmentation"
+  authors: "Sayan Goswami and Subhasis Chaudhuri"
+  when: 2018
+  where: "Indian Academy of Sciences SRF Report"
+  published: yes
+  code: https://github.com/say4n/deepcosegmentation.pytorch
+  url: https://drive.google.com/file/d/1OL5Ur3v8voOgv6_XzGRkqVxb4y2-1jML/view
