@@ -2,7 +2,7 @@
 
 import os
 from yaml import Loader, load
-from templates import document, education, heading, publications
+from templates import basic, document, education, heading, publications
 
 
 DATA_DIR = "data"
@@ -15,6 +15,14 @@ with open(os.path.join(DATA_DIR, "achievements.yml"), "rt") as f:
 
 with open(os.path.join(DATA_DIR, "basic.yml"), "rt") as f:
     basic_data = load(f, Loader=Loader)
+
+    basic_string = basic.LAYOUT.substitute(firstname=basic_data["name"]["first"],
+                                            lastname=basic_data["name"]["last"],
+                                            website=basic_data["website"],
+                                            email=basic_data["email"],
+                                            skype=basic_data["skype"],
+                                            phone=basic_data["phone"],
+                                            interests=basic_data["interests"])
 
 with open(os.path.join(DATA_DIR, "courses.yml"), "rt") as f:
     courses_data = load(f, Loader=Loader)
@@ -67,6 +75,8 @@ with open(os.path.join(DATA_DIR, "skills.yml"), "rt") as f:
 
 def generate_document():
     content = f"""
+    {basic_string}
+
     {education_string}
 
     {publications_string}
