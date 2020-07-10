@@ -2,12 +2,11 @@
 
 import os
 from yaml import load, Loader
-from templates import heading, education, publications
+from templates import heading, education, publications, document
 
 
 DATA_DIR = "data"
 LAYOUR_DIR = "layouts"
-DEBUG = True
 
 
 with open(os.path.join(DATA_DIR, "achievements.yml"), "rt") as f:
@@ -32,8 +31,6 @@ with open(os.path.join(DATA_DIR, "education.yml"), "rt") as f:
 
     education_string = education.LAYOUT.substitute(heading=section,
                                                     listing=listing)
-
-    if DEBUG: print(education_string)
 
 with open(os.path.join(DATA_DIR, "experience.yml"), "rt") as f:
     experience_data = load(f, Loader=Loader)
@@ -60,10 +57,18 @@ with open(os.path.join(DATA_DIR, "publications.yml"), "rt") as f:
     publications_string = publications.LAYOUT.substitute(heading=section,
                                                             listing=listing)
 
-    if DEBUG: print(publications_string)
-
 with open(os.path.join(DATA_DIR, "references.yml"), "rt") as f:
     references_data = load(f, Loader=Loader)
 
 with open(os.path.join(DATA_DIR, "skills.yml"), "rt") as f:
     skills_data = load(f, Loader=Loader)
+
+
+def generate_document():
+    content = ""
+    return document.LAYOUT.substitute(content=content)
+
+
+if __name__ == "__main__":
+    doc = generate_document()
+    print(doc)
