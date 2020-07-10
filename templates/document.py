@@ -1,10 +1,7 @@
 from string import Template
 
 LAYOUT = Template(r"""
-% !TEX TS-program = arara
-% arara: pdflatex: {shell: true}
-
-\documentclass[12pt]{article} % Set default font size to 11pt
+\documentclass[11pt]{article} % Set default font size to 12pt
 
 % lists
 \usepackage{fullpage}
@@ -24,7 +21,7 @@ LAYOUT = Template(r"""
 \usepackage{fontawesome}
 
 % Narrower page margins
-\usepackage[margin=0.75in]{geometry}
+\usepackage[a4paper, margin=0.5in]{geometry}
 
 % Fancy undelines
 \usepackage[normalem]{ulem}

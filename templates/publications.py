@@ -1,7 +1,7 @@
 from string import Template
 
 LISTING = Template(r"""
-\item {\it $where, $when} -- \href{$url}{\it $title}, $authors
+\item \href{$url}{\it $title} -- {\it $where, $when}, $authors
 """)
 
 LAYOUT = Template(r"""
