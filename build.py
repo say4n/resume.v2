@@ -4,7 +4,7 @@ import os
 
 from yaml import Loader, load
 
-from templates import (basic, courses, document, education, heading,
+from templates import (basic, courses, document, education, heading, references,
                        publications)
 
 DATA_DIR = "data"
@@ -46,7 +46,6 @@ with open(os.path.join(DATA_DIR, "courses.yml"), "rt") as f:
     courses_string = courses.LAYOUT.safe_substitute(heading=section,
                                                     undergrad=undergrad_string,
                                                     moocs=mooc_string)
-
 
 with open(os.path.join(DATA_DIR, "education.yml"), "rt") as f:
     education_data = load(f, Loader=Loader)
@@ -92,6 +91,17 @@ with open(os.path.join(DATA_DIR, "publications.yml"), "rt") as f:
 
 with open(os.path.join(DATA_DIR, "references.yml"), "rt") as f:
     references_data = load(f, Loader=Loader)
+    section = heading.HEADING.safe_substitute(heading="References")
+    listing = ""
+
+    for r in references_data:
+        listing += references.LISTING.safe_substitute(name=r["name"],
+                                                        email=r["email"],
+                                                        designation=r["designation"],
+                                                        organization=r["organization"])
+
+    referees = references.LAYOUT.safe_substitute(heading=section,
+                                                    listing=listing)
 
 with open(os.path.join(DATA_DIR, "skills.yml"), "rt") as f:
     skills_data = load(f, Loader=Loader)
@@ -106,6 +116,8 @@ def generate_document():
     {courses_string}
 
     {publications_string}
+
+    {referees}
     """
     return document.LAYOUT.safe_substitute(content=content)
 
