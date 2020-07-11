@@ -5,13 +5,13 @@ MOOC_LISTING = Template(r"""
 """)
 
 MOOC_LAYOUT = Template(r"""
-\textbf{MOOCs: }
+\textbf{MOOCs}
 \begin{itemize*}
 \itemsep0em
 
 $listing
 
-\end{itemize*}\\
+\end{itemize*}
 """)
 
 UNDERGRAD_LISTING = Template(r"""
@@ -19,19 +19,19 @@ UNDERGRAD_LISTING = Template(r"""
 """)
 
 UNDERGRAD_LAYOUT = Template(r"""
-\textbf{Undergraduate Coursework: }
+\textbf{Undergraduate Coursework}
 \begin{itemize*}
 \itemsep0em
 
 $listing
 
-\end{itemize*}\\
+\end{itemize*}
 """)
 
 LAYOUT = Template(r"""
 $heading\\
 
 $undergrad
-
-$moocs
+\vspace{2mm}
+$moocs\\
 """)
