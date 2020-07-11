@@ -118,18 +118,18 @@ with open(os.path.join(DATA_DIR, "skills.yml"), "rt") as f:
 
 def generate_document():
     content = f"""
-    {basic_string}
+{basic_string}
 
-    {education_string}
+{education_string}
 
-    {courses_string}
+{courses_string}
 
-    {publications_string}
+{publications_string}
 
-    {skills_string}
+{skills_string}
 
-    {referees}
-    """
+{referees}
+"""
     return document.LAYOUT.safe_substitute(content=content)
 
 
