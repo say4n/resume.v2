@@ -32,214 +32,214 @@ Undergraduate Coursework:
   - name  : Humanities
     code  : ET/Hum/T/A/111
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : Physical Electronics
     code  : ET/T/112
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : Calculus
     code  : ET/Math/T/113
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : Vector Calculus and Transforms
     code  : ET/Math/T/114
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : Physics
     code  : ET/Ph/T/1B/115
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : Computer Programming \& Numerical Analysis
     code  : ET/T/116
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : Circuit Theory
     code  : ET/T/121
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : Electron Devices
     code  : ET/T/121
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : Abstract Algebra
     code  : ET/Math/T/123
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : Linear Algebra
     code  : ET/Math/T/124
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : Engineering Mechanics
     code  : ET/AM/ME/T/1B/125
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : EM Theory
     code  : ET/T/211
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : Network Synthesis
     code  : ET/T/212
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : Signal Theory and Noise
     code  : ET/T/213
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : Digital Logic Circuits
     code  : ET/T/214
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : Analog Circuits I and II
     code  : ET/T/215,221
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : Electrical Machines
     code  : ET/EE/T/216
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : Digital Circuit and Systems
     code  : ET/T/222
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : Analog Communication Systems
     code  : ET/T/223
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : Transmission Lines and Wave Guides
     code  : ET/T/224
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : Electrical Measurements
     code  : ET/T/225
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : Data Structure and Algorithms
     code  : ET/T/226
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : Microprocessors and Micro-controllers
     code  : ET/T/311
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : Control Engineering
     code  : ET/T/312
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : Digital Communication Systems
     code  : ET/T/313
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : Antennas and Propagation
     code  : ET/T/314
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : IC Design \& Technology
     code  : ET/T/315, 321
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : Computer Organization and Architecture
     code  : ET/T/316
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : Communication Switching Systems
     code  : ET/T/322
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : Digital Signal Processing
     code  : ET/T/323
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : Digital Control Systems
     code  : ET/T/324
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : System Software
     code  : ET/T/325
     where : Jadavpur University
-		relevant:yes
+    relevant: yes
 
   - name  : Embedded Systems
     code  : ET/T/326
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : Computer Communications Network
     code  : ET/T/411
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : Operating Systems
     code  : ET/T/412
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : VLSI Design
     code  : ET/T/413
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : Microwave Engineering
     code  : ET/T/414
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : Industrial Management
     code  : ET/MNG/ME/T/1/421
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : Wireless Communication Systems
     code  : ET/T/422
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : Optical Fiber Communication
     code  : ET/T/423
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : Instrumentation and Measurement
     code  : ET/T/424
     where : Jadavpur University
-		relevant: no
+    relevant: no
 
   - name  : Pattern Analysis and Machine Intelligence
     code  : Elective
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
 
   - name  : Digital Image Processing
     code  : Elective
     where : Jadavpur University
-		relevant: yes
+    relevant: yes
