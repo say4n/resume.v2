@@ -5,7 +5,7 @@ import os
 from yaml import Loader, load
 
 from templates import (basic, courses, document, education, heading, references,
-                       publications)
+                       publications, skills)
 
 DATA_DIR = "data"
 LAYOUR_DIR = "layouts"
@@ -105,6 +105,15 @@ with open(os.path.join(DATA_DIR, "references.yml"), "rt") as f:
 
 with open(os.path.join(DATA_DIR, "skills.yml"), "rt") as f:
     skills_data = load(f, Loader=Loader)
+    section = heading.HEADING.safe_substitute(heading="Skills")
+    listing = ""
+
+    for level in skills_data:
+        listing += skills.LISTING.safe_substitute(level=level.title(),
+                                                    skills=", ".join(skills_data[level]))
+
+    skills_string = skills.LAYOUT.safe_substitute(heading=section,
+                                                    listing=listing)
 
 
 def generate_document():
@@ -116,6 +125,8 @@ def generate_document():
     {courses_string}
 
     {publications_string}
+
+    {skills_string}
 
     {referees}
     """
