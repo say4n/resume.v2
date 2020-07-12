@@ -3,6 +3,11 @@
   url: https://github.com/say4n/bandit.rl
   description: A k-armed bandit test bed implementation for comparing various reinforcement learning algorithms.
 
+- name: mlpack/ensmallen
+  language: C++
+  url: https://github.com/mlpack/ensmallen
+  description: Implemented a framework for multi-objective optimization in the C++ machine learning library mlpack.
+
 - name: rtx.go
   language: Go
   url: https://github.com/say4n/rtx.go
