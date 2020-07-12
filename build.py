@@ -5,7 +5,7 @@ import os
 from yaml import Loader, load
 
 from templates import (basic, courses, document, education, heading, references,
-                       publications, skills)
+                       publications, skills, projects)
 
 DATA_DIR = "data"
 LAYOUR_DIR = "layouts"
@@ -16,12 +16,12 @@ with open(os.path.join(DATA_DIR, "basic.yml"), "rt") as f:
     basic_data = load(f, Loader=Loader)
 
     basic_string = basic.LAYOUT.safe_substitute(firstname=basic_data["name"]["first"],
-                                            lastname=basic_data["name"]["last"],
-                                            website=basic_data["website"],
-                                            email=basic_data["email"],
-                                            skype=basic_data["skype"],
-                                            phone=basic_data["phone"],
-                                            interests=basic_data["interests"])
+                                                lastname=basic_data["name"]["last"],
+                                                website=basic_data["website"],
+                                                email=basic_data["email"],
+                                                skype=basic_data["skype"],
+                                                phone=basic_data["phone"],
+                                                interests=basic_data["interests"])
 
 with open(os.path.join(DATA_DIR, "courses.yml"), "rt") as f:
     courses_data = load(f, Loader=Loader)
@@ -32,14 +32,16 @@ with open(os.path.join(DATA_DIR, "courses.yml"), "rt") as f:
     undergrad_listing = ""
     for u in undergrad:
         if u["relevant"]:
-            undergrad_listing += courses.UNDERGRAD_LISTING.safe_substitute(name=u["name"])
+            undergrad_listing += courses.UNDERGRAD_LISTING.safe_substitute(
+                name=u["name"])
 
-    undergrad_string = courses.UNDERGRAD_LAYOUT.safe_substitute(listing=undergrad_listing)
+    undergrad_string = courses.UNDERGRAD_LAYOUT.safe_substitute(
+        listing=undergrad_listing)
 
     mooc_listing = ""
     for m in moocs:
         mooc_listing += courses.MOOC_LISTING.safe_substitute(name=m["name"],
-                                                        where=m["where"])
+                                                             where=m["where"])
 
     mooc_string = courses.MOOC_LAYOUT.safe_substitute(listing=mooc_listing)
 
@@ -54,12 +56,12 @@ with open(os.path.join(DATA_DIR, "education.yml"), "rt") as f:
 
     for e in education_data:
         listing += education.LISTING.safe_substitute(school=e["name"],
-                                                location=e["location"],
-                                                duration=e["duration"],
-                                                description=r"\\ ".join(e["description"]))
+                                                     location=e["location"],
+                                                     duration=e["duration"],
+                                                     description=r"\\ ".join(e["description"]))
 
     education_string = education.LAYOUT.safe_substitute(heading=section,
-                                                    listing=listing)
+                                                        listing=listing)
 
 with open(os.path.join(DATA_DIR, "experience.yml"), "rt") as f:
     experience_data = load(f, Loader=Loader)
@@ -69,6 +71,16 @@ with open(os.path.join(DATA_DIR, "positions.yml"), "rt") as f:
 
 with open(os.path.join(DATA_DIR, "projects.yml"), "rt") as f:
     projects_data = load(f, Loader=Loader)
+    section = heading.HEADING.safe_substitute(heading="Projects")
+    listing = ""
+
+    for p in projects_data:
+        listing += projects.LISTING.safe_substitute(name=p["name"],
+                                                    url=p["url"],
+                                                    description=p["description"])
+
+    projects_string = projects.LAYOUT.safe_substitute(heading=section,
+                                                        listing=listing)
 
 with open(os.path.join(DATA_DIR, "achievements.yml"), "rt") as f:
     achievements_data = load(f, Loader=Loader)
@@ -81,13 +93,13 @@ with open(os.path.join(DATA_DIR, "publications.yml"), "rt") as f:
     for p in publications_data:
         if p["published"] == True:
             listing += publications.LISTING.safe_substitute(where=p["where"],
-                                                        when=p["when"],
-                                                        url=p["url"],
-                                                        title=p["title"],
-                                                        authors=p["authors"])
+                                                            when=p["when"],
+                                                            url=p["url"],
+                                                            title=p["title"],
+                                                            authors=p["authors"])
 
     publications_string = publications.LAYOUT.safe_substitute(heading=section,
-                                                            listing=listing)
+                                                              listing=listing)
 
 with open(os.path.join(DATA_DIR, "references.yml"), "rt") as f:
     references_data = load(f, Loader=Loader)
@@ -96,12 +108,12 @@ with open(os.path.join(DATA_DIR, "references.yml"), "rt") as f:
 
     for r in references_data:
         listing += references.LISTING.safe_substitute(name=r["name"],
-                                                        email=r["email"],
-                                                        designation=r["designation"],
-                                                        organization=r["organization"])
+                                                      email=r["email"],
+                                                      designation=r["designation"],
+                                                      organization=r["organization"])
 
     referees = references.LAYOUT.safe_substitute(heading=section,
-                                                    listing=listing)
+                                                 listing=listing)
 
 with open(os.path.join(DATA_DIR, "skills.yml"), "rt") as f:
     skills_data = load(f, Loader=Loader)
@@ -110,10 +122,10 @@ with open(os.path.join(DATA_DIR, "skills.yml"), "rt") as f:
 
     for level in skills_data:
         listing += skills.LISTING.safe_substitute(level=level.title(),
-                                                    skills=", ".join(skills_data[level]))
+                                                  skills=", ".join(skills_data[level]))
 
     skills_string = skills.LAYOUT.safe_substitute(heading=section,
-                                                    listing=listing)
+                                                  listing=listing)
 
 
 def generate_document():
@@ -125,6 +137,8 @@ def generate_document():
 {courses_string}
 
 {publications_string}
+
+{projects_string}
 
 {skills_string}
 
@@ -141,4 +155,5 @@ if __name__ == "__main__":
     with open(os.path.join(BUILD_DIR, "resume.tex"), "w+t") as fp:
         fp.write(doc)
 
-    os.system(f"pdflatex -output-directory build {os.path.join(BUILD_DIR, 'resume.tex')}")
+    os.system(
+        f"pdflatex -output-directory build {os.path.join(BUILD_DIR, 'resume.tex')}")

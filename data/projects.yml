@@ -1,74 +1,74 @@
 - name: bandit.rl
   language: Python
   url: https://github.com/say4n/bandit.rl
-  description: A k-armed bandit test bed implementation for comparing various reinforcement learning algorithms.
+  description: A k-armed bandit test bed implementation for comparing various reinforcement learning algorithms
 
 - name: mlpack/ensmallen
   language: C++
   url: https://github.com/mlpack/ensmallen
-  description: Implemented a framework for multi-objective optimization in the C++ machine learning library mlpack.
+  description: Implemented a framework for multi-objective optimization in the C++ machine learning library mlpack
 
 - name: rtx.go
   language: Go
   url: https://github.com/say4n/rtx.go
-  description: A brute force ray tracing implementation.
+  description: A brute force ray tracing implementation
 
 - name: eightyfive
   language: Go
   url: https://github.com/say4n/eightyfive
-  description: An emulator for Intel's 8085.
+  description: An emulator for Intel's 8085
 
 - name: ysh
   language: C++
   url: https://github.com/say4n/ysh
-  description: An UNIX shell implementation.
+  description: An UNIX shell implementation
 
 - name: gobi
   language: Golang
   url: https://github.com/say4n/gobi
-  description: An in-memory database with a query language.
+  description: An in-memory database with a query language
 
 - name: infinity
   language: C++
   url: https://github.com/say4n/infinity
-  description: A signed, arbitrary precision decimal arithmetic library for C++, dynamically linked at compile time.
+  description: A signed, arbitrary precision decimal arithmetic library for C++, dynamically linked at compile time
 
 - name: Deep Co-segmentation
   language: Python
   url: https://github.com/say4n/deepcosegmentation.pytorch
-  description: Deep object co-segmentation with deep convolutional neural networks using a siamese architecture.
+  description: Deep object co-segmentation with deep convolutional neural networks using a siamese architecture
 
 - name: SegNet
   language: Python
   url: https://github.com/say4n/pytorch-segnet
-  description: Semantic image segmentation using deep convolutional auto-encoders.
+  description: Semantic image segmentation using deep convolutional auto-encoders
 
 - name: flow
   language: Python
   url: https://github.com/say4n/flow
-  description: Visualiser for control flow of arbitrary python code.
+  description: Visualiser for control flow of arbitrary python code
 
 - name: fsmutil
   language: Python
   url: https://github.com/say4n/fsmutil
-  description: A finite state machine generator for binary sequence detection.
+  description: A finite state machine generator for binary sequence detection
 
 - name: Pyscuss
   language: Python
   url: https://github.com/say4n/pyscuss
-  description: A real time messaging app, uses web sockets, non-persistent sessions.
+  description: A real time messaging app, uses web sockets, non-persistent sessions
 
 - name: bfutil
   language: C++
   url: https://github.com/say4n/bfutil
-  description: An interpreter for the BF language and a translator from BF to C with optimisations.
+  description: An interpreter for the BF language and a translator from BF to C with optimisations
 
 - name: LinkTo
   language: Python
   url: https://github.com/say4n/LinkTo
-  description: An URL shortener with analytics dashboard, built using Flask framework, uses Redis as datastore.
+  description: An URL shortener with analytics dashboard, built using Flask framework, uses Redis as datastore
 
 - name: HN - Sentiment analysis
   language: Python
   url: https://goo.gl/pekdz3
-  description: Sentiment analysis on HackerNews comments to correlate negativity of comments and day of week.
+  description: Sentiment analysis on HackerNews comments to correlate negativity of comments and day of week
