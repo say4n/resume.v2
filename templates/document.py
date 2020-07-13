@@ -33,6 +33,9 @@ LAYOUT = Template(r"""
 \usepackage{tabularx}
 \usepackage{multirow}
 
+% Relative weighted tables
+\usepackage{tabu}
+
 \usepackage{textcase}
 
 % Don't number pages
