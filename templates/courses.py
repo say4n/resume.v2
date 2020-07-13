@@ -1,12 +1,12 @@
 from string import Template
 
 MOOC_LISTING = Template(r"""
-\item $name ($where) $\cdot$
+\item $name ($where)
 """)
 
 MOOC_LAYOUT = Template(r"""
 \textbf{MOOCs}
-\begin{itemize*}
+\begin{itemize*}[itemjoin={{ $\cdot$}}]
 \itemsep0em
 
 $listing
@@ -15,12 +15,12 @@ $listing
 """)
 
 UNDERGRAD_LISTING = Template(r"""
-\item $name $\cdot$
+\item $name
 """)
 
 UNDERGRAD_LAYOUT = Template(r"""
 \textbf{Undergraduate Coursework}
-\begin{itemize*}
+\begin{itemize*}[itemjoin={{ $\cdot$}}]
 \itemsep0em
 
 $listing
