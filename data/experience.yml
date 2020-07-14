@@ -1,31 +1,31 @@
 industry:
   - designation: Associate Developer, Data Protocols Team
-    duration: May 2019 -- July 2019
+    duration: May '19 -- Jul '19
     location: Samsung R\&D Institute, Bangalore
     url: https://github.com/say4n/quic-echo
     description: Decreased latency, improved throughput for mobile, wireless traffic through QUIC protocol.
 
 research:
   - designation: Volunteer
-    duration: July 2020
+    duration: Jul '20
     location: 37\textsuperscript{th} ICML
     url: https://iclr.cc
     description: Helped organize the event, co-ordinated with authors and general support.
 
   - designation: Volunteer
-    duration: April 2020
+    duration: Apr '20
     location: 8\textsuperscript{th} ICLR
     url: https://iclr.cc
     description: Helped organize the event, co-ordinated with authors and general support.
 
   - designation: Mentor, Deep Reinforcement Learning Nanodegree
-    duration: Jul 2019 -- Jan 2020
+    duration: Jul '19 -- Jan '20
     location: Udacity
     url: https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893
     description: Mentored students 1:1, resolved doubts, guides through coursework \& project reviews.
 
   - designation: Research Assistant, Artificial Intelligence Lab
-    duration: August 2018 - May 2020
+    duration: Aug '18 - May '20
     location: Jadavpur University
     url: https://www.amitkonar.com/
     description: >
@@ -35,19 +35,19 @@ research:
       Cooperative task planning for multi-agent systems, evolutionary algorithms, path planning in general.
 
   - designation: Research Fellow, Vision and Image Processing Lab
-    duration: May 2018 -- July 2018
+    duration: May '18 -- Jul '18
     location: IIT Bombay
     url: http://www.ee.iitb.ac.in/~viplab/
     description: Worked on object co-segmentation using supervised and unsupervised machine learning, data augmentation using generative models. Advised by Prof. Subhasis Chaudhuri.
 
   - designation: Community Mentor, Convolution Neural Networks Course
-    duration: Jan 2018 -- Jul 2019
+    duration: Jan '18 -- Jul '19
     location: Coursera
     url: https://www.coursera.org/learn/convolutional-neural-networks
     description: Helped students grasp course content by answering questions \& resolving doubts.
 
   - designation: Undergraduate Researcher, NLP Lab
-    duration: July 2017 - April 2019
+    duration: Jul '17 - Apr '19
     location: Jadavpur University
     url: https://sites.google.com/site/sudipnaskar/
     description: Worked on abstractive text summarization. Explorer recurrent, convolutional and graph based neural network based approaches for natural language processing.

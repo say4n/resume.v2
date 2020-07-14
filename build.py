@@ -4,8 +4,9 @@ import os
 
 from yaml import Loader, load
 
-from templates import (basic, courses, document, education, heading, references,
-                       publications, skills, projects, achievements)
+from templates import (achievements, basic, courses, document, education,
+                       experience, heading, projects, publications, references,
+                       skills)
 
 DATA_DIR = "data"
 LAYOUR_DIR = "layouts"
@@ -65,6 +66,25 @@ with open(os.path.join(DATA_DIR, "education.yml"), "rt") as f:
 
 with open(os.path.join(DATA_DIR, "experience.yml"), "rt") as f:
     experience_data = load(f, Loader=Loader)
+    section = heading.HEADING.safe_substitute(heading="Experience")
+    listing = ""
+
+    for e in experience_data["research"]:
+        listing += experience.LISTING.safe_substitute(location=e["location"],
+                                                        designation=e["designation"],
+                                                        duration=e["duration"],
+                                                        url=e["url"],
+                                                        description=e["description"])
+
+    for w in experience_data["industry"]:
+        listing += experience.LISTING.safe_substitute(location=w["location"],
+                                                        designation=w["designation"],
+                                                        duration=w["duration"],
+                                                        url=w["url"],
+                                                        description=w["description"])
+
+    experience_string = experience.LAYOUT.safe_substitute(heading=section,
+                                                            listing=listing)
 
 with open(os.path.join(DATA_DIR, "positions.yml"), "rt") as f:
     positions_data = load(f, Loader=Loader)
@@ -143,9 +163,11 @@ def generate_document():
 
 {education_string}
 
-{courses_string}
+{experience_string}
 
 {publications_string}
+
+{courses_string}
 
 {projects_string}
 
