@@ -2,6 +2,7 @@
 
 import argparse
 import os
+import subprocess
 
 from yaml import Loader, load
 
@@ -216,6 +217,8 @@ if __name__ == "__main__":
         f"pdflatex -output-directory build {os.path.join(BUILD_DIR, 'resume.tex')}")
 
     if args.release:
-        ts = str(timestamp.now)
-        os.system(
-            f"hub release create -a build/resume.pdf -m '{timestamp.timestring}' {ts}")
+        tag = subprocess.check_output(
+            ['git', 'rev-parse', '--short', 'HEAD']).decode('ascii').strip()
+        command = f"hub release create -a build/resume.pdf -m '{timestamp.timestring}' '{tag}'"
+
+        os.system(command)
