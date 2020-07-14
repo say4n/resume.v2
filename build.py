@@ -71,20 +71,20 @@ with open(os.path.join(DATA_DIR, "experience.yml"), "rt") as f:
 
     for e in experience_data["research"]:
         listing += experience.LISTING.safe_substitute(location=e["location"],
-                                                        designation=e["designation"],
-                                                        duration=e["duration"],
-                                                        url=e["url"],
-                                                        description=e["description"])
+                                                      designation=e["designation"],
+                                                      duration=e["duration"],
+                                                      url=e["url"],
+                                                      description=e["description"])
 
     for w in experience_data["industry"]:
         listing += experience.LISTING.safe_substitute(location=w["location"],
-                                                        designation=w["designation"],
-                                                        duration=w["duration"],
-                                                        url=w["url"],
-                                                        description=w["description"])
+                                                      designation=w["designation"],
+                                                      duration=w["duration"],
+                                                      url=w["url"],
+                                                      description=w["description"])
 
     experience_string = experience.LAYOUT.safe_substitute(heading=section,
-                                                            listing=listing)
+                                                          listing=listing)
 
 with open(os.path.join(DATA_DIR, "positions.yml"), "rt") as f:
     positions_data = load(f, Loader=Loader)
@@ -93,9 +93,9 @@ with open(os.path.join(DATA_DIR, "positions.yml"), "rt") as f:
 
     for p in positions_data:
         listing += positions.LISTING.safe_substitute(designation=p["designation"],
-                                                        organisation=p["organisation"],
-                                                        description=p["description"],
-                                                        date=p["date"])
+                                                     organisation=p["organisation"],
+                                                     description=p["description"],
+                                                     date=p["date"])
 
     positions_string = positions.LAYOUT.safe_substitute(heading=section,
                                                         listing=listing)
@@ -111,7 +111,7 @@ with open(os.path.join(DATA_DIR, "projects.yml"), "rt") as f:
                                                     description=p["description"])
 
     projects_string = projects.LAYOUT.safe_substitute(heading=section,
-                                                        listing=listing)
+                                                      listing=listing)
 
 with open(os.path.join(DATA_DIR, "achievements.yml"), "rt") as f:
     achievements_data = load(f, Loader=Loader)
@@ -123,7 +123,7 @@ with open(os.path.join(DATA_DIR, "achievements.yml"), "rt") as f:
                                                         date=a["date"])
 
     achievements_string = achievements.LAYOUT.safe_substitute(heading=section,
-                                                                listing=listing)
+                                                              listing=listing)
 
 with open(os.path.join(DATA_DIR, "publications.yml"), "rt") as f:
     publications_data = load(f, Loader=Loader)
