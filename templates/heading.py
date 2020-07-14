@@ -7,7 +7,7 @@ HEADING = Template(r"""
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{tabularx}{\textwidth}{@{}l X}
+\begin{tabu} to \textwidth {@{}l X}
 	{\LARGE \textsc{$heading}}  & {\hrulefill} \\
-\end{tabularx}
+\end{tabu}
 """)
