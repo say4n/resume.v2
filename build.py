@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 
+import argparse
 import os
 
 from yaml import Loader, load
@@ -196,6 +197,14 @@ def generate_document():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--release",
+        default=False,
+        action='store_true',
+        help="Create a GitHub release on build.")
+    args = parser.parse_args()
+
     doc = generate_document()
 
     os.system("rm -rf build && mkdir -p build")
@@ -205,3 +214,8 @@ if __name__ == "__main__":
 
     os.system(
         f"pdflatex -output-directory build {os.path.join(BUILD_DIR, 'resume.tex')}")
+
+    if args.release:
+        ts = str(timestamp.now)
+        os.system(
+            f"hub release create -a build/resume.pdf -m '{timestamp.timestring}' {ts}")
