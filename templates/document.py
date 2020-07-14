@@ -29,12 +29,10 @@ LAYOUT = Template(r"""
 % Lists with no bullets and aligned to edge
 \setlist[itemize]{leftmargin=0em, label={}}
 
-% Tables for layout (yuck!)
-\usepackage{tabularx}
+% Tables for layout + relative weighted tables
+\usepackage{tabu}
 \usepackage{multirow}
 
-% Relative weighted tables
-\usepackage{tabu}
 
 \usepackage{textcase}
 
