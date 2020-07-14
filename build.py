@@ -6,7 +6,7 @@ from yaml import Loader, load
 
 from templates import (achievements, basic, courses, document, education,
                        experience, heading, positions, projects, publications,
-                       references, skills)
+                       references, skills, timestamp)
 
 DATA_DIR = "data"
 LAYOUR_DIR = "layouts"
@@ -189,6 +189,8 @@ def generate_document():
 {skills_string}
 
 {referees}
+
+{timestamp.LAYOUT}
 """
     return document.LAYOUT.safe_substitute(content=content)
 
