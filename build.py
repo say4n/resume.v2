@@ -5,8 +5,8 @@ import os
 from yaml import Loader, load
 
 from templates import (achievements, basic, courses, document, education,
-                       experience, heading, projects, publications, references,
-                       skills)
+                       experience, heading, positions, projects, publications,
+                       references, skills)
 
 DATA_DIR = "data"
 LAYOUR_DIR = "layouts"
@@ -88,6 +88,17 @@ with open(os.path.join(DATA_DIR, "experience.yml"), "rt") as f:
 
 with open(os.path.join(DATA_DIR, "positions.yml"), "rt") as f:
     positions_data = load(f, Loader=Loader)
+    section = heading.HEADING.safe_substitute(heading="Positions Held")
+    listing = ""
+
+    for p in positions_data:
+        listing += positions.LISTING.safe_substitute(designation=p["designation"],
+                                                        organisation=p["organisation"],
+                                                        description=p["description"],
+                                                        date=p["date"])
+
+    positions_string = positions.LAYOUT.safe_substitute(heading=section,
+                                                        listing=listing)
 
 with open(os.path.join(DATA_DIR, "projects.yml"), "rt") as f:
     projects_data = load(f, Loader=Loader)
@@ -172,6 +183,8 @@ def generate_document():
 {projects_string}
 
 {achievements_string}
+
+{positions_string}
 
 {skills_string}
 
