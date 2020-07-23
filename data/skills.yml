@@ -1,29 +1,42 @@
-proficient:
-  - Python
-  - Golang
-  - C++
-  - C
+programming:
+  skilled:
+    - Python
+    - Golang
+    - C++
+    - C
 
-experienced:
-  - Pytorch
-  - Keras
-  - make
-  - Git
-  - Tensorflow
-  - LATEX
-  - Numpy
-  - Flask
-  - NetworkX
+  proficient:
+    - Pytorch
+    - Keras
+    - make
+    - Git
+    - Tensorflow
+    - LATEX
+    - Numpy
+    - Flask
+    - NetworkX
 
-familiar:
-  - ReactJS
-  - Haskell
-  - Kotlin(Android)
-  - HTML
-  - JS
-  - Redis
-  - MySQL
-  - Django
-  - Octave
-  - MATLAB
-  - Bash
+  experienced:
+    - ReactJS
+    - Haskell
+    - Kotlin(Android)
+    - HTML
+    - JS
+    - Redis
+    - MySQL
+    - Django
+    - Octave
+    - MATLAB
+    - Bash
+
+languages:
+  skilled:
+    - English
+    - Bengali
+
+  proficient:
+   - Hindi
+
+  experienced:
+    - French
+    - Spanish

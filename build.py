@@ -159,12 +159,17 @@ with open(os.path.join(DATA_DIR, "references.yml"), "rt") as f:
 
 with open(os.path.join(DATA_DIR, "skills.yml"), "rt") as f:
     skills_data = load(f, Loader=Loader)
-    section = heading.HEADING.safe_substitute(heading="Skills")
+    section = heading.HEADING.safe_substitute(heading="Additional Skills")
     listing = ""
 
-    for level in skills_data:
-        listing += skills.LISTING.safe_substitute(level=level.title(),
-                                                  skills=", ".join(skills_data[level]))
+    for skill_type in skills_data:
+        listing += skills.TYPE_HEADING.safe_substitute(type=skill_type.title())
+
+        for level in skills_data[skill_type]:
+            listing += skills.LISTING.safe_substitute(level=level.title(),
+                                                    skills=", ".join(skills_data[skill_type][level]))
+
+        listing += "\\\\"
 
     skills_string = skills.LAYOUT.safe_substitute(heading=section,
                                                   listing=listing)

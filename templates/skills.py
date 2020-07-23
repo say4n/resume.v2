@@ -1,8 +1,10 @@
 from string import Template
 
-LISTING = Template(r"""
-\textbf{$level} in $skills.
+TYPE_HEADING = Template(r"""
+\textbf{$type}
 """)
+
+LISTING = Template(r"""\textit{$level} in $skills. """)
 
 LAYOUT = Template(r"""
 $heading\\
