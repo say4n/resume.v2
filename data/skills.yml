@@ -16,7 +16,7 @@ programming:
     - Flask
     - NetworkX
 
-  experienced:
+  experience:
     - ReactJS
     - Haskell
     - Kotlin(Android)
@@ -37,6 +37,6 @@ languages:
   proficient:
    - Hindi
 
-  experienced:
+  experience:
     - French
     - Spanish
