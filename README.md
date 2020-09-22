@@ -12,4 +12,3 @@ final document. It can optionally push a release to this repository on a success
 ## author
 
 Sayan Goswami &copy; 2020
-
