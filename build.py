@@ -179,25 +179,61 @@ def generate_document():
     content = f"""
 {basic_string}
 
+\\begin{{minipage}}{{\\textwidth}}
 {education_string}
+\\end{{minipage}}
 
+\\vspace{{5mm}}
+
+\\begin{{minipage}}{{\\textwidth}}
 {experience_string}
+\\end{{minipage}}
 
+\\vspace{{5mm}}
+
+\\begin{{minipage}}{{\\textwidth}}
 {publications_string}
+\\end{{minipage}}
 
+\\vspace{{5mm}}
+
+\\begin{{minipage}}{{\\textwidth}}
 {courses_string}
+\\end{{minipage}}
 
+\\vspace{{5mm}}
+
+\\begin{{minipage}}{{\\textwidth}}
 {projects_string}
+\\end{{minipage}}
 
+\\vspace{{5mm}}
+
+\\begin{{minipage}}{{\\textwidth}}
 {achievements_string}
+\\end{{minipage}}
 
+\\vspace{{5mm}}
+
+\\begin{{minipage}}{{\\textwidth}}
 {positions_string}
+\\end{{minipage}}
 
+\\vspace{{5mm}}
+
+\\begin{{minipage}}{{\\textwidth}}
 {skills_string}
+\\end{{minipage}}
 
+\\vspace{{5mm}}
+
+\\begin{{minipage}}{{\\textwidth}}
 {referees}
+\\end{{minipage}}
 
+\\begin{{minipage}}{{\\textwidth}}
 {timestamp.LAYOUT}
+\\end{{minipage}}
 """
     return document.LAYOUT.safe_substitute(content=content)
 
