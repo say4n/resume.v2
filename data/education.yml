@@ -1,3 +1,11 @@
+- name: Universitat Pompeu Fabra
+  duration: 2020-2021
+  location: Barcelona
+  description:
+    - Masters in Intelligent Interactive Systems
+    - Department of Information and Communication Technologies
+
+
 - name: Jadavpur University
   duration:   2016-20
   location: India
