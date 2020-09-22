@@ -231,6 +231,8 @@ def generate_document():
 {referees}
 \\end{{minipage}}
 
+\\vfill
+
 \\begin{{minipage}}{{\\textwidth}}
 {timestamp.LAYOUT}
 \\end{{minipage}}
