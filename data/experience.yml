@@ -6,6 +6,15 @@ industry:
     description: Decreased latency, improved throughput for mobile, wireless traffic through QUIC protocol.
 
 research:
+  - designation: Core Contributor
+    duration: Dec '19 - Present
+    location: mlpack.org
+    url: https://mlpack.org
+    description: >
+      Added multi-objective optimzation to ensmallen as well as its first multi-objective optimizer. Ensmallen is a
+      numerical optimization library written in C++ that aims to provide fast, extensible implementations of
+      cutting-edge machine learning algorithms.
+
   - designation: Volunteer
     duration: Jul '20
     location: 37\textsuperscript{th} ICML

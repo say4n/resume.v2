@@ -167,7 +167,7 @@ with open(os.path.join(DATA_DIR, "skills.yml"), "rt") as f:
 
         for level in skills_data[skill_type]:
             listing += skills.LISTING.safe_substitute(level=level.title(),
-                                                    skills=", ".join(skills_data[skill_type][level]))
+                                                      skills=", ".join(skills_data[skill_type][level]))
 
         listing += "\\\\"
 
