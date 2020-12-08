@@ -117,7 +117,7 @@ with open(os.path.join(DATA_DIR, "projects.yml"), "rt") as f:
 
 with open(os.path.join(DATA_DIR, "achievements.yml"), "rt") as f:
     achievements_data = load(f, Loader=Loader)
-    section = heading.HEADING.safe_substitute(heading="Achievements")
+    section = heading.HEADING.safe_substitute(heading="Honors and Awards")
     listing = ""
 
     for a in achievements_data:
@@ -192,6 +192,12 @@ def generate_document():
 \\vspace{{5mm}}
 
 \\begin{{minipage}}{{\\textwidth}}
+{achievements_string}
+\\end{{minipage}}
+
+\\vspace{{5mm}}
+
+\\begin{{minipage}}{{\\textwidth}}
 {publications_string}
 \\end{{minipage}}
 
@@ -205,12 +211,6 @@ def generate_document():
 
 \\begin{{minipage}}{{\\textwidth}}
 {projects_string}
-\\end{{minipage}}
-
-\\vspace{{5mm}}
-
-\\begin{{minipage}}{{\\textwidth}}
-{achievements_string}
 \\end{{minipage}}
 
 \\vspace{{5mm}}
