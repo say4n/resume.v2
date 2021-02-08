@@ -6,14 +6,12 @@ industry:
     description: Decreased latency, improved throughput for mobile, wireless traffic through QUIC protocol.
 
 research:
-  - designation: Core Contributor
-    duration: Dec '19 - Present
-    location: mlpack.org
-    url: https://mlpack.org
+  - designation: Research Fellow, Artificial Intelligence Research Institute
+    duration: Nov '20 - Present
+    location: Barcelona
+    url: https://www.iiia.csic.es
     description: >
-      Added multi-objective optimzation to ensmallen as well as its first multi-objective optimizer. Ensmallen is a
-      numerical optimization library written in C++ that aims to provide fast, extensible implementations of
-      cutting-edge machine learning algorithms.
+      Pursuing research on the use of reinforcement learning to automate the behaviour of NPCs in simulation environments. Advised by Prof. Josep-Lluis Arcos and Prof. Jordi Sabater-Mir.
 
   - designation: Volunteer
     duration: Jul '20
