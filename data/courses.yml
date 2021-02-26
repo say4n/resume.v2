@@ -1,3 +1,29 @@
+Masters Coursework:
+  - name: Machine Learning
+    code: 31645
+    where: UPF, Barcelona
+
+  - name: Natural Language Interaction
+    code: 31642
+    where: UPF, Barcelona
+
+  - name: Research Methodology
+    code: 32605
+    where: UPF, Barcelona
+
+  - name: Autonomous Systems
+    code: 31641
+    where: UPF, Barcelona
+
+  - name: Mobile Robotics
+    code: 31643
+    where: UPF, Barcelona
+
+  - name: Web Intelligence
+    code: 31644
+    where: UPF, Barcelona
+
+
 MOOCs:
   - name  :   Fundamentals of Reinforcement Learning by Martha \& Adam White
     where :   Coursera
