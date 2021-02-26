@@ -28,9 +28,25 @@ $listing
 \end{itemize*}
 """)
 
+GRAD_LISTING = Template(r"""
+\item $name
+""")
+
+GRAD_LAYOUT = Template(r"""
+\textbf{Masters Coursework}
+\begin{itemize*}[itemjoin={{ $\cdot$}}]
+\itemsep0em
+
+$listing
+
+\end{itemize*}
+""")
+
 LAYOUT = Template(r"""
 $heading\\
 
+$grad
+\vspace{2mm}
 $undergrad
 \vspace{2mm}
 $moocs\\

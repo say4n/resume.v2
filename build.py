@@ -31,6 +31,15 @@ with open(os.path.join(DATA_DIR, "courses.yml"), "rt") as f:
     section = heading.HEADING.safe_substitute(heading="Relevant Coursework")
     moocs = courses_data["MOOCs"]
     undergrad = courses_data["Undergraduate Coursework"]
+    grad = courses_data["Masters Coursework"]
+
+    grad_listing = ""
+    for u in grad:
+        grad_listing += courses.GRAD_LISTING.safe_substitute(
+            name=u["name"])
+
+    grad_string = courses.GRAD_LAYOUT.safe_substitute(
+        listing=grad_listing)
 
     undergrad_listing = ""
     for u in undergrad:
@@ -49,6 +58,7 @@ with open(os.path.join(DATA_DIR, "courses.yml"), "rt") as f:
     mooc_string = courses.MOOC_LAYOUT.safe_substitute(listing=mooc_listing)
 
     courses_string = courses.LAYOUT.safe_substitute(heading=section,
+                                                    grad=grad_string,
                                                     undergrad=undergrad_string,
                                                     moocs=mooc_string)
 
@@ -159,7 +169,7 @@ with open(os.path.join(DATA_DIR, "references.yml"), "rt") as f:
 
 with open(os.path.join(DATA_DIR, "skills.yml"), "rt") as f:
     skills_data = load(f, Loader=Loader)
-    section = heading.HEADING.safe_substitute(heading="Additional Skills")
+    section = heading.HEADING.safe_substitute(heading="Skills")
     listing = ""
 
     for skill_type in skills_data:
@@ -210,6 +220,12 @@ def generate_document():
 \\vspace{{5mm}}
 
 \\begin{{minipage}}{{\\textwidth}}
+{skills_string}
+\\end{{minipage}}
+
+\\vspace{{5mm}}
+
+\\begin{{minipage}}{{\\textwidth}}
 {projects_string}
 \\end{{minipage}}
 
@@ -217,12 +233,6 @@ def generate_document():
 
 \\begin{{minipage}}{{\\textwidth}}
 {positions_string}
-\\end{{minipage}}
-
-\\vspace{{5mm}}
-
-\\begin{{minipage}}{{\\textwidth}}
-{skills_string}
 \\end{{minipage}}
 
 \\vspace{{5mm}}
