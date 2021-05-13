@@ -3,16 +3,24 @@ Masters Coursework:
     code: 31645
     where: Universitat Pompeu Fabra
 
+  - name: Convex Optimization
+    code:
+    where: Universitat Pompeu Fabra
+
+  - name: Autonomous Systems (Classical ML)
+    code: 31641
+    where: Universitat Pompeu Fabra
+
+  - name: Advanced Distributed Systems
+    code:
+    where: Universitat Pompeu Fabra
+
+  - name: Computer Vision
+    code:
+    where: Universitat Pompeu Fabra
+
   - name: Natural Language Interaction
     code: 31642
-    where: Universitat Pompeu Fabra
-
-  - name: Research Methodology
-    code: 32605
-    where: Universitat Pompeu Fabra
-
-  - name: Autonomous Systems
-    code: 31641
     where: Universitat Pompeu Fabra
 
   - name: Mobile Robotics
@@ -21,6 +29,10 @@ Masters Coursework:
 
   - name: Web Intelligence
     code: 31644
+    where: Universitat Pompeu Fabra
+
+  - name: Research Methodology
+    code: 32605
     where: Universitat Pompeu Fabra
 
 
