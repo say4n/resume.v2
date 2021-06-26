@@ -20,18 +20,6 @@ research:
     description: >
       Using reinforcement learning to automate the behaviour of NPCs in simulation environments. Advised by Prof. Josep-Lluis Arcos and Prof. Jordi Sabater-Mir.
 
-  - designation: Volunteer
-    duration: Jul '20
-    location: 37\textsuperscript{th} ICML
-    url: https://iclr.cc
-    description: Helped organize the event, co-ordinated with authors and general support.
-
-  - designation: Volunteer
-    duration: Apr '20
-    location: 8\textsuperscript{th} ICLR
-    url: https://iclr.cc
-    description: Helped organize the event, co-ordinated with authors and general support.
-
   - designation: Mentor, Deep Reinforcement Learning Nanodegree
     duration: Jul '19 -- Jan '20
     location: Udacity

@@ -8,5 +8,5 @@ $name, $designation, $organization \hfill \href{mailto:$email}{$email}
 LAYOUT = Template(r"""
 $heading\\
 
-$listing
+(Available on request)
 """)

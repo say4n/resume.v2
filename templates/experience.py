@@ -2,8 +2,7 @@ from string import Template
 
 LISTING = Template(r"""
 
-\textbf{\href{$url}{$designation, $location}} & \multirow{2}{*}{$duration} \\
-$description & \\
+\textbf{\href{$url}{$designation}}, $location & $duration \\
 
 """)
 

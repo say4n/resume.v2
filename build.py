@@ -50,17 +50,9 @@ with open(os.path.join(DATA_DIR, "courses.yml"), "rt") as f:
     undergrad_string = courses.UNDERGRAD_LAYOUT.safe_substitute(
         listing=undergrad_listing)
 
-    mooc_listing = ""
-    for m in moocs:
-        mooc_listing += courses.MOOC_LISTING.safe_substitute(name=m["name"],
-                                                             where=m["where"])
-
-    mooc_string = courses.MOOC_LAYOUT.safe_substitute(listing=mooc_listing)
-
     courses_string = courses.LAYOUT.safe_substitute(heading=section,
                                                     grad=grad_string,
-                                                    undergrad=undergrad_string,
-                                                    moocs=mooc_string)
+                                                    undergrad=undergrad_string)
 
 with open(os.path.join(DATA_DIR, "education.yml"), "rt") as f:
     education_data = load(f, Loader=Loader)
@@ -85,15 +77,13 @@ with open(os.path.join(DATA_DIR, "experience.yml"), "rt") as f:
         listing += experience.LISTING.safe_substitute(location=e["location"],
                                                       designation=e["designation"],
                                                       duration=e["duration"],
-                                                      url=e["url"],
-                                                      description=e["description"])
+                                                      url=e["url"])
 
     for w in experience_data["industry"]:
         listing += experience.LISTING.safe_substitute(location=w["location"],
                                                       designation=w["designation"],
                                                       duration=w["duration"],
-                                                      url=w["url"],
-                                                      description=w["description"])
+                                                      url=w["url"])
 
     experience_string = experience.LAYOUT.safe_substitute(heading=section,
                                                           listing=listing)
@@ -114,7 +104,7 @@ with open(os.path.join(DATA_DIR, "positions.yml"), "rt") as f:
 
 with open(os.path.join(DATA_DIR, "projects.yml"), "rt") as f:
     projects_data = load(f, Loader=Loader)
-    section = heading.HEADING.safe_substitute(heading="Projects")
+    section = heading.HEADING.safe_substitute(heading="Select Projects")
     listing = ""
 
     for p in projects_data:
@@ -164,8 +154,7 @@ with open(os.path.join(DATA_DIR, "references.yml"), "rt") as f:
                                                       designation=r["designation"],
                                                       organization=r["organization"])
 
-    referees = references.LAYOUT.safe_substitute(heading=section,
-                                                 listing=listing)
+    referees = references.LAYOUT.safe_substitute(heading=section)
 
 with open(os.path.join(DATA_DIR, "skills.yml"), "rt") as f:
     skills_data = load(f, Loader=Loader)
@@ -188,58 +177,55 @@ with open(os.path.join(DATA_DIR, "skills.yml"), "rt") as f:
 def generate_document():
     content = f"""
 {basic_string}
-
 \\begin{{minipage}}{{\\textwidth}}
 {education_string}
 \\end{{minipage}}
 
-\\vspace{{5mm}}
+\\vspace{{2mm}}
 
 \\begin{{minipage}}{{\\textwidth}}
 {experience_string}
 \\end{{minipage}}
 
-\\vspace{{5mm}}
-
-\\begin{{minipage}}{{\\textwidth}}
-{achievements_string}
-\\end{{minipage}}
-
-\\vspace{{5mm}}
+\\vspace{{2mm}}
 
 \\begin{{minipage}}{{\\textwidth}}
 {publications_string}
 \\end{{minipage}}
 
-\\vspace{{5mm}}
+\\vspace{{2mm}}
 
 \\begin{{minipage}}{{\\textwidth}}
 {courses_string}
 \\end{{minipage}}
 
-\\vspace{{5mm}}
+\\vspace{{2mm}}
 
 \\begin{{minipage}}{{\\textwidth}}
 {skills_string}
 \\end{{minipage}}
 
-\\vspace{{5mm}}
+\\vspace{{2mm}}
+
+\\begin{{minipage}}{{\\textwidth}}
+{achievements_string}
+\\end{{minipage}}
+
+
+\\vspace{{2mm}}
+
 
 \\begin{{minipage}}{{\\textwidth}}
 {projects_string}
 \\end{{minipage}}
 
-\\vspace{{5mm}}
+\\vspace{{2mm}}
 
 \\begin{{minipage}}{{\\textwidth}}
 {positions_string}
 \\end{{minipage}}
 
-\\vspace{{5mm}}
-
-\\begin{{minipage}}{{\\textwidth}}
-{referees}
-\\end{{minipage}}
+\\vspace{{2mm}}
 
 \\vfill
 

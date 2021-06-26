@@ -47,7 +47,5 @@ $heading\\
 
 $grad
 \vspace{2mm}
-$undergrad
-\vspace{2mm}
-$moocs\\
+$undergrad\\
 """)

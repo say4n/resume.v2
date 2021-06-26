@@ -1,7 +1,7 @@
 from string import Template
 
 LAYOUT = Template(r"""
-\documentclass[11pt]{article} % Set default font size to 12pt
+\documentclass[8pt]{article} % Set default font size to 12pt
 
 % lists
 \usepackage{fullpage}
